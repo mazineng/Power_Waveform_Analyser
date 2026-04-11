@@ -16,4 +16,7 @@ double compute_peak_to_peak(WaveformSample*samples, int count, char phase);
 double compute_dc_offset(WaveformSample*samples, int count, char phase);
 int count_clipped(WaveformSample*samples, int count, char phase);
 int check_compliance(double rms);
+double compute_frequency_range(WaveformSample*samples,int count);
+double compute_power_factor_range(WaveformSample*samples,int count);
+double compute_thd_range(WaveformSample*samples,int count);
 #endif

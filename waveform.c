@@ -69,3 +69,24 @@ int count_clipped(WaveformSample*samples, int count, char phase) {
 int check_compliance(double rms) {
     return (rms >= 207.0 && rms <= 253.0);
 }
+double compute_frequency_range(WaveformSample*samples,int count) {
+    double sum=0.0;
+    for (int i = 0; i < count; i++) {
+        sum+=samples[i].frequency;
+    }
+    return sum/count;
+}
+double compute_power_factor_range(WaveformSample*samples,int count) {
+    double sum=0.0;
+    for (int i = 0; i < count; i++) {
+        sum+=samples[i].power_factor;
+    }
+    return sum/count;
+}
+double compute_thd_range(WaveformSample*samples,int count) {
+    double sum=0.0;
+    for (int i = 0; i < count; i++) {
+        sum+=samples[i].thd_percent;
+    }
+    return sum/count;
+}

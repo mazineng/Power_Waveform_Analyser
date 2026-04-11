@@ -26,6 +26,9 @@ int main() {
     int compliantA = check_compliance(rmsA);
     int compliantB = check_compliance(rmsB);
     int compliantC = check_compliance(rmsC);
+    double freq_range = compute_frequency_range(samples,count);
+    double pf_range = compute_power_factor_range(samples,count);
+    double thd_range = compute_thd_range(samples,count);
     printf("Phase A RMS Voltage: %.4f \n",rmsA);
     printf("Phase B RMS Voltage: %.4f \n", rmsB);
     printf("Phase C RMS Voltage: %.4f \n", rmsC);
@@ -41,6 +44,9 @@ int main() {
     printf("Compliance of phase A: %s \n,",compliantA? "Compliant":"Not Compliant");
     printf("Compliance of phase B: %s \n",compliantB? "Compliant":"Not Compliant");
     printf("Compliance of phase C: %s \n",compliantC? "Compliant":"Not Compliant");
+    printf("Frequency Range: %.4f Hz\n",freq_range);
+    printf("Power Factor Range: %.4f \n",pf_range);
+    printf("THD Range: %.4f%\n",thd_range);
     free(samples);
     return 0;
 }
