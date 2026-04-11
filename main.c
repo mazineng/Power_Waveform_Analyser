@@ -11,8 +11,9 @@ int main() {
         return 1;
     }
 
+    double rms = compute_rms(samples, count);
     printf("number of rows : %d\n", count);
-    printf("1st timestamp: %.4f\n", samples[0].timestamp);
+    printf("Phase A RMS: %.2f\n", rms);
 
     free(samples);
     return 0;
