@@ -1,7 +1,7 @@
 #include <math.h>
 #include "waveform.h"
 
-double compute_rms(WaveformSample *samples, int count) {
+double compute_rms(WaveformSample*samples, int count) {
     double sum_sq = 0.0;
 
     for (int i = 0; i < count; i++) {
@@ -10,7 +10,7 @@ double compute_rms(WaveformSample *samples, int count) {
 
     return sqrt(sum_sq / count);
 }
-double compute_peak_to_peak(WaveformSample *samples, int count) {
+double compute_peak_to_peak(WaveformSample*samples, int count) {
     double max = samples[0].phase_A_voltage;
     double min = samples[0].phase_A_voltage;
 
@@ -25,7 +25,7 @@ double compute_peak_to_peak(WaveformSample *samples, int count) {
     return max - min;
 }
 
-double compute_dc_offset(WaveformSample *samples, int count) {
+double compute_dc_offset(WaveformSample*samples, int count) {
     double sum = 0.0;
 
     for (int i = 0; i < count; i++) {
@@ -33,4 +33,16 @@ double compute_dc_offset(WaveformSample *samples, int count) {
     }
 
     return sum / count;
+}
+int count_clipped(WaveformSample*samples, int count) {
+    int clipped=0;
+    for (int i=0; i<count; i++) {
+        if (fabs(samples[i].phase_A_voltage)>=324.9) {
+            clipped++;
+        }
+    }
+    return clipped;
+}
+int check_compliance(double rms) {
+    return (rms >= 207.0 && rms <= 253.0);
 }
