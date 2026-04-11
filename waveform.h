@@ -11,9 +11,9 @@ typedef struct {
     double power_factor;
     double thd_percent;
 } WaveformSample;
-double compute_rms(WaveformSample*samples, int count);
-double compute_peak_to_peak(WaveformSample*samples, int count);
-double compute_dc_offset(WaveformSample*samples, int count);
-int count_clipped(WaveformSample*samples, int count);
+double compute_rms(WaveformSample*samples, int count,char phase);
+double compute_peak_to_peak(WaveformSample*samples, int count, char phase);
+double compute_dc_offset(WaveformSample*samples, int count, char phase);
+int count_clipped(WaveformSample*samples, int count, char phase);
 int check_compliance(double rms);
 #endif
