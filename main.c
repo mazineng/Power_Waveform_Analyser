@@ -47,6 +47,10 @@ int main() {
     printf("Frequency Range: %.4f Hz\n",freq_range);
     printf("Power Factor Range: %.4f \n",pf_range);
     printf("THD Range: %.4f%\n",thd_range);
+    write_results("results.txt", rmsA, rmsB, rmsC,clippedA, clippedB,  clippedC,
+     compliantA,  compliantB, compliantC, freq_range, pf_range, thd_range,  vppA,
+     vppB, vppC, dcA, dcB, dcC);
+    printf("Results written to results.txt file. \n");
     free(samples);
     return 0;
 }
