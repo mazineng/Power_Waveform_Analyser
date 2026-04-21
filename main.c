@@ -26,9 +26,9 @@ int main() {
     int compliantA = check_compliance(rmsA);
     int compliantB = check_compliance(rmsB);
     int compliantC = check_compliance(rmsC);
-    double freq_range = compute_frequency_range(samples,count);
-    double pf_range = compute_power_factor_range(samples,count);
-    double thd_range = compute_thd_range(samples,count);
+    double freq_average = compute_frequency_average(samples,count);
+    double pf_average = compute_power_factor_average(samples,count);
+    double thd_average = compute_thd_average(samples,count);
     printf("Phase A RMS Voltage: %.4f \n",rmsA);
     printf("Phase B RMS Voltage: %.4f \n", rmsB);
     printf("Phase C RMS Voltage: %.4f \n", rmsC);
@@ -44,11 +44,11 @@ int main() {
     printf("Compliance of phase A: %s \n,",compliantA? "Compliant":"Not Compliant");
     printf("Compliance of phase B: %s \n",compliantB? "Compliant":"Not Compliant");
     printf("Compliance of phase C: %s \n",compliantC? "Compliant":"Not Compliant");
-    printf("Frequency Range: %.4f Hz\n",freq_range);
-    printf("Power Factor Range: %.4f \n",pf_range);
-    printf("THD Range: %.4f%\n",thd_range);
+    printf("Average Frequency: %.4f Hz\n",freq_average);
+    printf("Average Power Factor: %.4f \n",pf_average);
+    printf("Average Total Harmonic Distortion: %.4f%\n",thd_average);
     write_results("results.txt", rmsA, rmsB, rmsC,clippedA, clippedB,  clippedC,
-     compliantA,  compliantB, compliantC, freq_range, pf_range, thd_range,  vppA,
+     compliantA,  compliantB, compliantC, freq_average, pf_average, thd_average,  vppA,
      vppB, vppC, dcA, dcB, dcC);
     printf("Results written to results.txt file. \n");
     free(samples);

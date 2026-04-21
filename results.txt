@@ -13,6 +13,6 @@ Clipped samples in phase C: 20
 Compliance of phase A: Compliant 
 ,Compliance of phase B: Compliant 
 ,Compliance of phase C: Compliant 
-,Frequency Range: 50.0275 Hz
-Power Factor Range: 0.9561 
-THD Range: 2.0930%
+,Average Frequency: 50.0275 Hz
+Average Power Factor: 0.9561 
+Average Total Harmonic Distortion: 2.0930%
