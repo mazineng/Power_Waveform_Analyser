@@ -62,9 +62,9 @@ void write_results(const char*filename, double rmsA, double rmsB, double rmsC,in
     fprintf(file,"Clipped samples in phase A: %d \n", clippedA);
     fprintf(file,"Clipped samples in phase B: %d \n", clippedB);
     fprintf(file,"Clipped samples in phase C: %d \n", clippedC);
-    fprintf(file,"Compliance of phase A: %s \n,",compliantA? "Compliant":"Not Compliant");
-    fprintf(file,"Compliance of phase B: %s \n,",compliantB? "Compliant":"Not Compliant");
-    fprintf(file,"Compliance of phase C: %s \n,",compliantC? "Compliant":"Not Compliant");
+    fprintf(file,"Compliance of phase A: %s \n",compliantA? "Compliant":"Not Compliant");
+    fprintf(file,"Compliance of phase B: %s \n",compliantB? "Compliant":"Not Compliant");
+    fprintf(file,"Compliance of phase C: %s \n",compliantC? "Compliant":"Not Compliant");
     fprintf(file,"Average Frequency: %.4f Hz\n",freq_average);
     fprintf(file,"Average Power Factor: %.4f \n",pf_average);
     fprintf(file,"Average Total Harmonic Distortion: %.4f%\n",thd_average);

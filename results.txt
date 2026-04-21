@@ -11,8 +11,8 @@ Clipped samples in phase A: 20
 Clipped samples in phase B: 20 
 Clipped samples in phase C: 20 
 Compliance of phase A: Compliant 
-,Compliance of phase B: Compliant 
-,Compliance of phase C: Compliant 
-,Average Frequency: 50.0275 Hz
+Compliance of phase B: Compliant 
+Compliance of phase C: Compliant 
+Average Frequency: 50.0275 Hz
 Average Power Factor: 0.9561 
 Average Total Harmonic Distortion: 2.0930%
