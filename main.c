@@ -41,7 +41,7 @@ int main() {
     printf("Clipped samples in phase A: %d \n", clippedA);
     printf("Clipped samples in phase B: %d \n", clippedB);
     printf("Clipped samples in phase C: %d \n", clippedC);
-    printf("Compliance of phase A: %s \n,",compliantA? "Compliant":"Not Compliant");
+    printf("Compliance of phase A: %s \n",compliantA? "Compliant":"Not Compliant");
     printf("Compliance of phase B: %s \n",compliantB? "Compliant":"Not Compliant");
     printf("Compliance of phase C: %s \n",compliantC? "Compliant":"Not Compliant");
     printf("Average Frequency: %.4f Hz\n",freq_average);
